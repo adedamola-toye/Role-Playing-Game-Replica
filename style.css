@@ -1,0 +1,107 @@
+body{
+    background-color: #020220
+
+}
+
+h1{
+    text-align: center;
+    margin-top:6rem;
+    color:/*  #79e25f */ #ff66ff;
+}
+h2{
+    display:none;
+}
+#game{
+    background-color: /* #b7bd10  */ #1a001a;
+    max-width: 400px;
+    min-width:250px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid  #cc00cc;
+}
+
+#about-game-text{
+    background-color: /* #240046 */ /* #709f57 */ #cc00cc;
+   padding:12px;
+   margin-top :10px;
+   border-radius: 6px;
+   color:/* #240046 */ white;
+   font-weight: 400;
+}
+
+#game p, #about-monster p{
+    margin-right: 10px;
+    display: inline;
+}
+
+#player-stats, #buttons-line{
+    border:1px solid white;
+    padding:10px;
+    border-radius: 6px;
+    color: /* white */ #39ff14;
+    /*margin:10px;*/
+}
+
+#player-stats{
+    
+    color: white;
+}
+
+#about-monster{
+    padding:10px 10px 10px 10px;
+    display:none; 
+    background-color: #990000;
+    margin-top:7px;
+    border-radius: 5px;
+    color: /* #ffffff */ #ffcccc ;
+
+}
+
+button{
+    background-color:/* #c81b35  */ #800080;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: 2px solid #c8abe0;
+    color: white;
+    
+}
+
+button:hover{
+    border: 2px solid #9933cc;
+    cursor:pointer;
+}
+
+#button4{
+    display:none;
+}
+
+@media  screen and (max-width : 767px) {
+    #buttons-line{
+        
+        display:flex;
+        gap: 1rem;
+        margin: 0 auto;
+        justify-content: center;
+        flex-wrap: wrap;   
+    }
+    button{
+        width: 100px;
+        padding:3px;
+        
+    }
+}
+
+
+
+@media screen and (min-width: 767px){
+    #button4{
+        margin: auto;
+        margin-top: 10px;
+        display:none;
+    }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Role Playing Game Replica</title>
+</head>
+<body>
+    <h1>Role Playing Game</h1>
+    <h2>Congratulations you won!!</h2>
+    <h2>Sorry, you lost</h2>
+    <div id="game">
+        <div id="player-stats">
+            <p>XP : <strong><span id="xp-score">0</span></strong></p>
+            <p>Health: <strong><span id="health-score">100</span></strong></p>
+            <p>Gold: <strong><span id="gold-score">50</span></strong></p>
+        </div>
+    
+        <div id="buttons-line">
+            <button id="button1"><b>Go to store</b></button>
+            <button id="button2"><b>Fight Monsters</b></button>
+            <button id="button3"><b>End Game</b></button>
+            <button id="button4">Go back to town square</button>
+            
+        </div>
+    
+        <div id="about-monster">
+            <p>Monster Name: <strong><span id="monster-name"></span></strong></p>
+            <p>Monster Health: <strong><span id="monster-health"></span></strong> </p>
+        </div>
+    
+        <div id="about-game-text">
+            <p>Welcome to the game. You can fight monsters to earn health points. You can also use your gold to buy weapon and health at the store. You are currently at the town square. What do you want to do?</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
