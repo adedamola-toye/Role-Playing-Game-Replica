@@ -3,7 +3,7 @@ let health = 100;
 let gold = 50;
 let currentWeaponIndex = 0;
 let monsterHealth;
-let monsterIndex;
+let monsterIndex ;
 let playerWeaponsInventory = ["stick"];
 
 const button1 = document.getElementById('button1');
@@ -254,8 +254,40 @@ function isMonsterHit(){
 }
 
 function dodge(){
-    text.innerText = `You dodge the attack from the ${monsters[fighting].name}`;
-}
+    const dodgeChance = 0.5
+    const dodgeSuccess = Math.random() > dodgeChance;
+    if(dodgeSuccess){
+        text.innerText = `You successfully dodged the attack from the ${monsters[monsterIndex].name}. 
+        You are on your way back to the town square..........`;
+        setTimeout(() => {
+            goToTownSquare();
+        }, 3000);
+        
+    }
+    else{
+        const damage = getMonsterAttackValue(monsters[monsterIndex].level);
+        health -= damage;
+        healthText.innerText = health;
+        text.innerText = `You tried to dodge, but the ${monsters[monsterIndex].name} hit you. You lose ${damage} health points. `
+        //You lose if you lose all your health in dodging
+        if(health <= 0){
+            setTimeout(() => {
+                    lose();
+                }, 3000);
+        }
+        //Continue to fight even after failed dodge
+        if(health > 0 && monsterHealth > 0){
+            text.innerText += `
+            You have another chance to fight the ${monsters[monsterIndex].name}.`;
+            setTimeout(() => {
+            fight();
+            }, 2500)
+            
+        }
+    }
+} 
+   
+    
 
 function endGame(){
     updateButton(gameLocations[7]);
